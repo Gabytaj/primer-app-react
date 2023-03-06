@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+// import AppBar from './Components/AppBar';
+import Navbar from './Components/Navbar/Navbar';
+import Main from './Components/Main/Main';
+import Astronauts from './Components/Astronauts/Astronauts';
 
 function App() {
+  const data ={
+    title: 'Hola espacio',
+    text: 'Holiii ayuda en el espacio no ha oxigeno'
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navbar/>
+      <Main {...data} />
+      {/* <Main title='Hola espacio' text='Holiii ayuda en el espacio no hay oxigeno'  /> */}
+      <Astronauts></Astronauts>
+      </div>
+
   );
 }
 
